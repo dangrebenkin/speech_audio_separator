@@ -28,9 +28,9 @@ pip install energy_separator
 
 ### Input data
 
-This command-line program has two modes: one-file splitting and several files splitting. 
+This command-line program has two modes: **one-file splitting** and **several files splitting**. 
 
-1. In the first case you can split just one audiofile with using -f flag, for example:
+1. In the first case you can split just one audiofile with using **-f** flag, for example:
 ```
 egsr -f /home/user/Documents/example.wav -s 16000 -max 120 -min 70
 ```
@@ -42,11 +42,11 @@ egsr -f /home/user/Documents/example.wav -s 16000 -max 120 -min 70
 | /home/user/Documents/example_2.wav | |
 | /home/user/Documents/example_2.wav | |
 
-And in this case you should use -fs flag, for example:
+And in this case you should use **-fs** flag, for example:
 ```
 egsr -fs example.csv -s 16000 -max 120 -min 70
 ```
-In both cases you also have to specify your file(s) sample rate (-s flag) in Hz, min (-min flag) and max (-max flag) time boundaries in seconds. In several files mode all of the files have to have a similar sample rate. All traceback and exceptions you can find in 'energy_separator.log'.
+In both cases you also have to **specify your file(s) sample rate (-s flag) in Hz, min (-min flag) and max (-max flag) time boundaries in seconds**. In several files mode all of the files have to have **a similar sample rate**. All traceback and exceptions you can find in **'energy_separator.log'**.
 
 ### Output data
 
@@ -69,12 +69,12 @@ INFO:root:Your file was seprated to these ones:['/home/user/Documents/tmp9zf04xb
 ```
 egsr [-h] [-f INPUT_AUDIO] [-fs INPUT_AUDIO_CSV] -s SAMPLE_RATE -max MAX_TIME -min MIN_TIME [-o OUTPUT_PATH]
 ```
-1. -f INPUT_AUDIO, --input_wav_file INPUT_AUDIO (input wav file path, optional);
-2. -fs INPUT_AUDIO_CSV, --list_of_input_wavs INPUT_AUDIO_CSV (input wavs csv-file, optional);
-3. -s SAMPLE_RATE, --sample_rate SAMPLE_RATE (wav sample_rate in Hz, always required);
-4. -max MAX_TIME, --max_duration MAX_TIME (max duration for each of output audiofiles in seconds, always required);
-5. -min MIN_TIME, --min_duration MIN_TIME (min duration for each of output audiofiles in seconds, always required);
-6. -o OUTPUT_PATH, --output_path OUTPUT_PATH (path for output files, optional), for example:
+1. **-f** INPUT_AUDIO, --input_wav_file INPUT_AUDIO (input wav file path, optional);
+2. **-fs** INPUT_AUDIO_CSV, --list_of_input_wavs INPUT_AUDIO_CSV (input wavs csv-file, optional);
+3. **-s** SAMPLE_RATE, --sample_rate SAMPLE_RATE (wav sample_rate in Hz, always required);
+4. **-max** MAX_TIME, --max_duration MAX_TIME (max duration for each of output audiofiles in seconds, always required);
+5. **-min** MIN_TIME, --min_duration MIN_TIME (min duration for each of output audiofiles in seconds, always required);
+6. **-o** OUTPUT_PATH, --output_path OUTPUT_PATH (path for output files, optional), for example:
 ```
 egsr -fs example.csv -s 16000 -max 120 -min 70 -o results
 ```
