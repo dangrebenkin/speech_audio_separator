@@ -35,7 +35,7 @@ This command-line program has two modes: one-file splitting and several files sp
 egsr -f /home/user/Documents/example.wav -s 16000 -max 120 -min 70
 ```
 2. Several files splitting means that you can give a csv-file with several audiofiles' paths in the first column (with no headers) as an input, like this one:
-
+| ------------- |
 | /home/user/Documents/example_1.wav |
 | /home/user/Documents/example_2.wav |
 | /home/user/Documents/example_2.wav |
@@ -57,7 +57,7 @@ INFO:root:Your file was seprated to these ones:['/home/user/Documents/tmp9zf04xb
 ```
 2. if you use several files mode, the paths of new files will be in the second column of your csv-file, for example:
 | path | new files |
-|---|---|
+| ------------- | ------------- |
 | /home/user/Documents/example_1.wav | '/home/user/Documents/tmp9zf04xbb.wav', '/home/user/Documents/tmphdcpa_bt.wav' |
 | /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04xbj.wav', '/home/user/Documents/tmpfdcpa_bt.wav'|
 | /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04dbb.wav', '/home/user/Documents/tmpqdcpa_bt.wav'|
