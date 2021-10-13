@@ -24,7 +24,7 @@ You can install it with pip:
 python3 -m pip install energy_separator
 ```
 
-## Input/output data & example
+## Input/output data & examples
 
 ### Input data
 
@@ -69,12 +69,12 @@ INFO:root:Your file was seprated to these ones:['/home/user/Documents/tmp9zf04xb
 ```
 egsr [-h] [-f INPUT_AUDIO] [-fs INPUT_AUDIO_CSV] -s SAMPLE_RATE -max MAX_TIME -min MIN_TIME [-o OUTPUT_PATH]
 ```
-1. **-f** INPUT_AUDIO, --input_wav_file INPUT_AUDIO (input wav file path, optional);
-2. **-fs** INPUT_AUDIO_CSV, --list_of_input_wavs INPUT_AUDIO_CSV (input wavs csv-file, optional);
-3. **-s** SAMPLE_RATE, --sample_rate SAMPLE_RATE (wav sample_rate in Hz, always required);
-4. **-max** MAX_TIME, --max_duration MAX_TIME (max duration for each of output audiofiles in seconds, always required);
-5. **-min** MIN_TIME, --min_duration MIN_TIME (min duration for each of output audiofiles in seconds, always required);
-6. **-o** OUTPUT_PATH, --output_path OUTPUT_PATH (path for output files, optional), for example:
+1. **-f** INPUT_AUDIO, --input_wav_file INPUT_AUDIO (input wav file path, **optional**);
+2. **-fs** INPUT_AUDIO_CSV, --list_of_input_wavs INPUT_AUDIO_CSV (input wavs csv-file, **optional**);
+3. **-s** SAMPLE_RATE, --sample_rate SAMPLE_RATE (wav sample_rate in Hz, **always required**);
+4. **-max** MAX_TIME, --max_duration MAX_TIME (max duration for each of output audiofiles in seconds, **always required**);
+5. **-min** MIN_TIME, --min_duration MIN_TIME (min duration for each of output audiofiles in seconds, **always required**);
+6. **-o** OUTPUT_PATH, --output_path OUTPUT_PATH (path for output files, **optional**), for example:
 ```
 egsr -fs example.csv -s 16000 -max 120 -min 70 -o results
 ```
