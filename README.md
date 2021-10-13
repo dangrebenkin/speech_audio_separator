@@ -1,32 +1,32 @@
 # energy_separator
 
-#### What is it for?
+### What is it for?
 
 This separator was created to split WAV PCM file(s) into several parts with less duration. It can be useful if you have some time or memory constraints: for example, if you need audiofiles with duration less then 2 minutes and more then 70 seconds but there is only one 2-minutes WAV-file, you can use this tool with max and min time parameters and there will be the intended result.
 
-#### How does a separation works?
+### How does a separation works?
 
 This method is based on the definition of signal energy from work[1] and it contains three steps:
 1. computing signal energy;
 2. finding some signal energy local minimums, which have a minimal sum but the temporal distance between these points is more (or is equal) than user's min time parameter and less (or is equal) than user's max time parameter;
 3. audiofile splitting into several new ones by the boundaries from step 2.
 
-#### Requirements & installation
+### Requirements & installation
 
-##### Requirements
+#### Requirements
 
 Python 3.6+
 
-##### Installation
+#### Installation
 
 You can install it with pip:
 ```
 pip install energy_separator
 ```
 
-#### Input/output data & example
+### Input/output data & example
 
-##### Input data
+#### Input data
 
 This command-line program has two modes: one-file splitting and several files splitting. 
 
@@ -46,7 +46,7 @@ egsr -fs example.csv -s 16000 -max 120 -min 70
 ```
 In both cases you also have to specify your file(s) sample rate (-s flag) in Hz, min (-min flag) and max (-max flag) time boundaries in seconds. In several files mode all of the files have to have a similar sample rate. All traceback and exceptions you can find in 'energy_separator.log'.
 
-##### Output data
+#### Output data
 
 The program output is several files with random names. These files path you can find in:
 
@@ -62,7 +62,7 @@ INFO:root:Your file was seprated to these ones:['/home/user/Documents/tmp9zf04xb
 | /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04xbj.wav', '/home/user/Documents/tmpfdcpa_bt.wav'|
 | /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04dbb.wav', '/home/user/Documents/tmpqdcpa_bt.wav'|
 
-#### Options
+### Options
 ```
 egsr [-h] [-f INPUT_AUDIO] [-fs INPUT_AUDIO_CSV] -s SAMPLE_RATE -max MAX_TIME -min MIN_TIME [-o OUTPUT_PATH]
 ```
@@ -76,5 +76,5 @@ egsr [-h] [-f INPUT_AUDIO] [-fs INPUT_AUDIO_CSV] -s SAMPLE_RATE -max MAX_TIME -m
 egsr -fs example.csv -s 16000 -max 120 -min 70 -o results
 ```
 
-#### Links
+### Links
 1. Рабинер Л.Р., Шафер Р.В. Цифровая обработка речевых сигналов — М.: Радио и связь, 1981. — 593 c., c. 114.
