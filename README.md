@@ -23,6 +23,12 @@ You can install it with pip:
 ```
 python3 -m pip install energy_separator
 ```
+or
+```
+git clone https://github.com/dangrebenkin/energy_separator.git
+cd energy_separator
+python3 setup.py install
+```
 
 ## Input/output data & examples
 
