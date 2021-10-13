@@ -21,7 +21,7 @@ Python 3.6+
 
 You can install it with pip:
 ```
-pip install energy_separator
+python3 -m pip install energy_separator
 ```
 
 ## Input/output data & example
