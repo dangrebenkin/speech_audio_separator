@@ -38,7 +38,8 @@ egsr -f /home/user/Documents/example.wav -s 16000 -max 120 -min 70
 ```
 2. Several files splitting means that you can give a csv-file with several audiofiles' paths in the first column (with no headers) as an input, like this one:
 
-| no headers | no headers |
+| Ignored | Ignored |
+| -- | -- |
 | /home/user/Documents/example_1.wav | |
 | /home/user/Documents/example_2.wav | |
 | /home/user/Documents/example_2.wav | |
