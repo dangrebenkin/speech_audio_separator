@@ -19,11 +19,7 @@ Python 3.6+
 
 ### Installation
 
-You can install it with pip:
-```
-python3 -m pip install energy_separator
-```
-or
+You can install it with these commands:
 ```
 git clone https://github.com/dangrebenkin/energy_separator.git
 cd energy_separator
