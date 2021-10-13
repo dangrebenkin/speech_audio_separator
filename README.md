@@ -4,7 +4,7 @@
 
 This separator was created to split WAV PCM file(s) into several parts with less duration. It can be useful if you have some time or memory constraints: for example, if you need audiofiles with duration less then 2 minutes and more then 70 seconds but there is only one 2-minutes WAV-file, you can use this tool with max and min time parameters and there will be the intended result.
 
-## How does a separation works?
+## How does a separation work?
 
 This method is based on the definition of signal energy from work[1] and it contains three steps:
 1. computing signal energy;
