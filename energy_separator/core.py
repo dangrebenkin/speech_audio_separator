@@ -118,6 +118,7 @@ def main():
 						continue
 				else:
 					logging.error("Check your audiofile format, it must be WAV PCM, file: "+path)
+					counter += 1
 					continue
 			df.to_csv(audio_csv, mode='w',index=False)
 			logging.info('End.')
