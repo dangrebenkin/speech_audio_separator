@@ -2,7 +2,7 @@
 
 ## What is it for?
 
-This separator was created to split WAV PCM file(s) into several parts with less duration. It can be useful if you have some time or memory constraints: for example, if you need audiofiles with duration less then 2 minutes and more then 70 seconds but there is only one 2-minutes WAV-file, you can use this tool with max and min time parameters and there will be the intended result.
+This separator was created to split WAV PCM file(s) into several parts with less duration. It can be useful if you have some time or memory constraints. For example, if you need audiofiles with duration less then 2 minutes and more then 70 seconds but there is only one 2-minutes WAV-file, you can use this tool with max and min time parameters and there will be the intended result.
 
 ## How does a separation work?
 
@@ -10,6 +10,8 @@ This method is based on the definition of signal energy from work[1] and it cont
 1. computing signal energy;
 2. finding some signal energy local minimums, which have a minimal sum but the temporal distance between these points is more (or is equal) than user's min time parameter and less (or is equal) than user's max time parameter;
 3. audiofile splitting into several new ones by the boundaries from step 2.
+
+Splitting audiofile(s) in this way gives you several smaller audiofragments which were splitted on pauses between words/phrases(!).
 
 ## Requirements & installation
 
