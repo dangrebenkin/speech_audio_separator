@@ -11,7 +11,7 @@ This method is based on the definition of signal energy from work[1] and it cont
 2. finding some signal energy local minimums, which have a minimal sum but the temporal distance between these points is more (or is equal) than user's min time parameter and less (or is equal) than user's max time parameter;
 3. audiofile splitting into several new ones by the boundaries from step 2.
 
-Splitting audiofile(s) in this way gives you several smaller audiofragments which were splitted on pauses between words/phrases(!).
+Splitting audiofile(s) in this way gives you several smaller (size, time) audiofragments which were splitted on pauses between words/phrases(!).
 
 ## Requirements & installation
 
