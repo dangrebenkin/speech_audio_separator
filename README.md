@@ -67,7 +67,7 @@ INFO:root:Your file was seprated to these ones:['/home/user/Documents/tmp9zf04xb
 | ------------- | ------------- |
 | /home/user/Documents/example_1.wav | '/home/user/Documents/tmp9zf04xbb.wav', '/home/user/Documents/tmphdcpa_bt.wav' |
 | /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04xbj.wav', '/home/user/Documents/tmpfdcpa_bt.wav'|
-| /home/user/Documents/example_2.wav | '/home/user/Documents/tmp9zf04dbb.wav', '/home/user/Documents/tmpqdcpa_bt.wav'|
+| /home/user/Documents/example_3.wav | '/home/user/Documents/tmp9zf04dbb.wav', '/home/user/Documents/tmpqdcpa_bt.wav'|
 
 ## Options
 ```
