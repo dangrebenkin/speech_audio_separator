@@ -83,7 +83,6 @@ class SeparatorVAD:
                 boundaries.append(audio_duration)
             else:
                 boundaries[-1] = boundaries[-1] + rest_time
-
             for startpoint, finishpoint in zip(boundaries, boundaries[1:]):
                 self.result_container.append(input_audio[startpoint:finishpoint])
 

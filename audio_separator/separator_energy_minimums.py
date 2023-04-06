@@ -9,14 +9,14 @@ class SeparatorSignalEnergy:
                  sample_rate: int = 16000,
                  max_duration_s: float = 0.4,
                  min_duration_s: float = 0.3,
-                 frame_duration: float = 0.001):
+                 frame_duration: float = 0.01):
 
         self.frame_duration = frame_duration
         self.sample_rate = sample_rate
-        self.max_duration_s = int(max_duration_s * self.sample_rate)
-        self.min_duration_s = int(min_duration_s * self.sample_rate)
+        self.max_duration_s = max_duration_s
+        self.min_duration_s = min_duration_s
         self.result_container = []
-        self.nperseg = int(self.sample_rate / 100)
+        self.nperseg = int(self.sample_rate / 10)
 
     def separate_function(self,
                           input_audio: np.array,
@@ -47,7 +47,6 @@ class SeparatorSignalEnergy:
         for i in range(len(energy_values) - 1):
             if (energy_values[i] < energy_values[i - 1]) and (energy_values[i] < energy_values[i + 1]):
                 energy_minimums.append(i)
-
         if len(energy_minimums) == 0:  # при отсутствии лок. минимумов в контейнер добавляется весь файл целиком
             self.result_container.append(input_audio)
         else:
@@ -78,14 +77,12 @@ class SeparatorSignalEnergy:
                     boundaries.append(current_part)
                 current_part = boundaries[-1] + self.max_duration_s  # вычисляем макс. допустимое значение конца
                 # след. фрагмента сигнала
-
             # добавление последней точки (конца сигнала)
             rest_time = audio_duration - boundaries[-1]
             if rest_time > self.min_duration_s:
                 boundaries.append(audio_duration)
             else:
                 boundaries[-1] = boundaries[-1] + rest_time
-
             for startpoint, finishpoint in zip(boundaries, boundaries[1:]):
                 self.result_container.append(input_audio[startpoint:finishpoint])
 
