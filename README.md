@@ -40,22 +40,22 @@ boundaries to the list;
 
     **_Separator()_** parameters list (all optional):
     
-   - **separator_type**: ways to find local minimums ('energy_minimums' or 'em'; 'vad'), default = 'energy_minimums';
-   - **sample_rate**: sampling rate (Hz) of audio signal, default = 16000;
-   - **max_duration_s**: max duration (seconds) of possible separated audio fragment, default = 0.4;
-   - **min_duration_s**: min duration (seconds) of possible separated audio fragment, default = 0.3;
-   - **frame_duration**: a frame duration (seconds) parameter for 'energy_minimums' audio processing, default = 0.001;
-   - **stream_enabled**: if True you can use a separate_stream function (see **_Stream mode_**), default = False;
-   - **max_container_duration_s**: a time bound (seconds) of audio container (stream mode), default = 1.0.
+   - `separator_type`: ways to find local minimums ('energy_minimums' or 'em'; 'vad'), default = 'energy_minimums';
+   - `sample_rate`: sampling rate (Hz) of audio signal, default = 16000;
+   - `max_duration_s`: max duration (seconds) of possible separated audio fragment, default = 0.4;
+   - `min_duration_s`: min duration (seconds) of possible separated audio fragment, default = 0.3;
+   - `frame_duration`: a frame duration (seconds) parameter for 'energy_minimums' audio processing, default = 0.001;
+   - `stream_enabled`: if True you can use a `separate_stream()` function (see **_Stream mode_**), default = False;
+   - `max_container_duration_s`: a time bound (seconds) of audio container (stream mode), default = 1.0.
    
-2. Separate audiofiles with **_separate()_** function:
+2. Separate audiofiles with `separate()` function:
     
     ```
    separated_files_dict = separator_object.separate()
     ```
    **_separate()_** function arguments (all optional) :
    
-    - input_audio_csv: you can give a csv-file (path) with several audiofiles paths in the first column (with no headers) 
+    - `input_audio_csv`: you can give a csv-file (path) with several audiofiles paths in the first column (with no headers) 
    as an input, for example:
    
    |                          |
@@ -65,7 +65,7 @@ boundaries to the list;
    | /home/user/Documents/example_3.wav |
 
    default = None;
-    - single_audiofile: audiofile to separate path, default = None.
+    - `single_audiofile`: audiofile to separate path, default = None.
 
    The output of **_separate()_** function is a dict:
 
