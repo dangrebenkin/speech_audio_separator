@@ -39,12 +39,13 @@ boundaries to the list;
     ```
 
     **_Separator()_** parameters list (all optional):
+    
    - **separator_type**: ways to find local minimums ('energy_minimums' or 'em'; 'vad'), default = 'energy_minimums';
    - **sample_rate**: sampling rate (Hz) of audio signal, default = 16000;
    - **max_duration_s**: max duration (seconds) of possible separated audio fragment, default = 0.4;
    - **min_duration_s**: min duration (seconds) of possible separated audio fragment, default = 0.3;
    - **frame_duration**: a frame duration (seconds) parameter for 'energy_minimums' audio processing, default = 0.001;
-   - **stream_enabled**: if True you can use a separate_function (see **_Stream mode_**), default = False;
+   - **stream_enabled**: if True you can use a separate_stream function (see **_Stream mode_**), default = False;
    - **max_container_duration_s**: a time bound (seconds) of audio container (stream mode), default = 1.0.
    
 2. Separate audiofiles with **_separate()_** function:
@@ -52,7 +53,8 @@ boundaries to the list;
     ```
    separated_files_dict = separator_object.separate()
     ```
-   **_separate()_** function arguments() (all optional) :
+   **_separate()_** function arguments (all optional) :
+   
     - input_audio_csv: you can give a csv-file (path) with several audiofiles paths in the first column (with no headers) 
    as an input, for example:
    
@@ -84,7 +86,7 @@ boundaries to the list;
    results = separator_object.separate_stream('40_sec_wav_file_name.wav')
    results  # [list of np.arrays], because total duration of processed audiofiles is 50 seconds now
    ```
-
+   
 #### Links
 
 1. Рабинер Л.Р., Шафер Р.В. Цифровая обработка речевых сигналов — М.: Радио и связь, 1981. — 593 c., c. 114.
