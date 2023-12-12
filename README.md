@@ -7,8 +7,8 @@ one 2-minutes WAV-file, you can use this tool with max and min time parameters a
 #### Installation:
 
 ```
-git clone https://github.com/dangrebenkin/audio_separator.git
-cd audio_separator
+git clone https://github.com/dangrebenkin/speech_audio_separator.git
+cd speech_audio_separator
 pip install -r requirements.txt
 python setup.py install
 ```
@@ -33,7 +33,7 @@ boundaries to the list;
 1. Create *Separator* object with your settings:
 
     ```
-    from audio_separator.separator import Separator 
+    from audio_separator import Separator 
     
     separator_object = Separator()
     ```
