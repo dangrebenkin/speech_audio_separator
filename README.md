@@ -1,6 +1,6 @@
-# audio separator
+# Speech audio separator
 
-A useful tool to split WAV PCM files to fragments.
+A useful tool to split speech WAV PCM files to fragments, **splitting bounds are located in speech pauses**.
 For example, if you need audiofiles with duration less than 2 minutes and more than 70 seconds but there is only 
 one 2-minutes WAV-file, you can use this tool with max and min time parameters and there will be the intended result.
 
