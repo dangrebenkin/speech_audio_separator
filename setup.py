@@ -15,7 +15,7 @@ setup(
     name='speech_audio_separator',
     version='0.3',
     description='a Python library for wav-files separation',
-    url='https://github.com/dangrebenkin/audio_separator',
+    url='https://github.com/dangrebenkin/speech_audio_separator',
     author='Daniel Grebenkin',
     author_email='d.grebenkin@g.nsu.ru',
     license='Apache License Version 2.0',
