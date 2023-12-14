@@ -97,6 +97,7 @@ class Separator:
                         result = self.separator_class.separate_function(input_audio=audio_array,
                                                                         audio_duration=audio_duration)
                         result_dict[path] = result
+                        self.separator_class.result_container = []
                     else:
                         logging.error("Check your audiofile format, it must be WAV PCM, file: " + path)
                         continue
@@ -112,6 +113,7 @@ class Separator:
                     result = self.separator_class.separate_function(input_audio=audio_array,
                                                                     audio_duration=audio_duration)
                     result_dict[single_audiofile] = result
+                    self.separator_class.result_container = []
                 else:
                     logging.error("Check your audiofile format, it must be WAV PCM, file: " + single_audiofile)
             except Exception as e:
@@ -132,6 +134,7 @@ class Separator:
             self.duration += new_file_duration
             piece_result = self.separator_class.separate_function(input_audio=audio_array,
                                                                   audio_duration=audio_duration)
+            self.separator_class.result_container = []
             self.container.extend(piece_result)
             if self.duration >= self.max_container_duration_s:
                 output = self.container
